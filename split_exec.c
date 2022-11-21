@@ -3,6 +3,7 @@
 /**
  * execute - executes parsed lines
  * @argv: parsed arguments
+ * @parsed: parsed arguments
  */
 
 void execute(char *argv[], char **parsed)

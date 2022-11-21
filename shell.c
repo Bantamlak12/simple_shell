@@ -19,7 +19,7 @@ char *_getline(void)
 }
 
 /**
- * _isatty - checks if the input is to a terminal
+ * _prompt - checks if the input is to a terminal
  *
  */
 void _prompt(void)
@@ -31,20 +31,22 @@ void _prompt(void)
 }
 
 /**
- * handle_signal - handle the signal for 'ctrl + C' and interrupt the process
+ * handle_sigint - handle the signal for 'ctrl + C' and interrupt the process
  * @sig: number of the signal SIGINT(=2)
  */
 
 void handle_sigint(int sig)
 {
 	char *prompt = "\n($) ";
-	if(sig == SIGINT)
+
+	if (sig == SIGINT)
 		write(STDOUT_FILENO, prompt, 6);
 }
 
 /**
  * main - Entry point
- *
+ * @argc: number of argument of count
+ * @argv: command line argument
  * Return: Always 0.
  */
 
